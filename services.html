@@ -33,6 +33,20 @@
                 grid-template-columns: repeat(2, 1fr); /* Two projects per row */
             }
         }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.7rem; /* Adjust base font size */
+            }
+            .grid {
+                grid-template-columns: 1fr; /* One item per row */
+            }
+            .latest-projects {
+                grid-template-columns: 1fr; /* One project per row */
+            }
+            .services-solutions {
+                grid-template-columns: 1fr; /* One service per row */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-[&#39;Inter&#39;]"><script>function showProject(image, title, description) { const modal = document.getElementById('project-modal'); document.getElementById('modal-image').src = image; document.getElementById('modal-title').textContent = title; document.getElementById('modal-description').textContent = description; modal.classList.remove('hidden'); }</script><div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"><div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl max-w-4xl w-full"><div class="relative"><button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="document.getElementById(&#34;project-modal&#34;).classList.add(&#34;hidden&#34;)"><i class="fas fa-times text-xl"></i></button><div class="p-8"><img id="modal-image" src="" alt="Project Preview" class="w-full rounded-lg mb-6"/><h3 id="modal-title" class="text-2xl font-bold mb-4"></h3><p id="modal-description" class="text-gray-600"></p></div></div></div></div>
@@ -143,7 +157,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow-sm p-8 mb-12">
+                    <div class="bg-white rounded-lg shadow-sm p-8 mb-12 services-solutions">
                         <h2 class="text-2xl font-bold mb-6">Services &amp; Solutions</h2>
                         <div class="grid grid-cols-4 gap-6 animate-fade-in">
                             <div class="flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg p-4 rounded-lg"><div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12"><i class="fas fa-code text-custom text-xl"></i></div><div><h3 class="font-semibold mb-2">Software Development</h3><p class="text-gray-600">Custom SaaS, API development, Web &amp; Mobile solutions using Python, React, Node.js</p></div></div><div class="flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg p-4 rounded-lg"><div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12"><i class="fas fa-globe text-custom text-xl"></i></div><div><h3 class="font-semibold mb-2">Geospatial Services</h3><p class="text-gray-600">PostGIS, OpenLayers, Leaflet implementation, Satellite Image Processing and Analysis Services</p></div></div>
