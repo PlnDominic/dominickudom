@@ -104,6 +104,52 @@
                 text-align: center; /* Center align profile information */
             }
         }
+        .logo {
+            text-transform: uppercase;
+            position: fixed;
+            left: 5%;
+            top: 3%;
+            font-family: 'Impact', sans-serif;
+            text-align: center;
+            font-size: 1.5rem;
+            /* font-weight: bolder; */
+            color: #131313;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+            line-height: 0.9;
+            pointer-events: auto;
+            cursor: pointer;
+            transition: TRANSFORM 0.3s ease, COLOR 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #4ECDC4;
+            transform: scale(1.05);
+        }
+
+        .logo .first-name {
+            font-size: 1rem;
+        }
+
+        .logo .last-name {
+            font-size: 1rem;
+        }
+        @media (max-width: 668px) {
+            h1 {
+                font-size: 0.7rem; /* Further reduce font size for main heading */
+            }
+            code {
+                font-size: 0.7rem; /* Further reduce font size for code element */
+            }
+            .explore-now {
+                font-size: 0.7rem; /* Further reduce font size for explore button */
+            }
+        }
+        @media (max-width: 668px) {
+            .main-heading {
+                font-size: 1rem; /* Reduce font size for the main heading */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-[&#39;Inter&#39;]"><script>function showProject(image, title, description) { const modal = document.getElementById('project-modal'); document.getElementById('modal-image').src = image; document.getElementById('modal-title').textContent = title; document.getElementById('modal-description').textContent = description; modal.classList.remove('hidden'); }</script><div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"><div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl max-w-4xl w-full"><div class="relative"><button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="document.getElementById(&#34;project-modal&#34;).classList.add(&#34;hidden&#34;)"><i class="fas fa-times text-xl"></i></button><img id="modal-image" src="" alt="Project Preview" class="w-full rounded-lg mb-6"/><h3 id="modal-title" class="text-2xl font-bold mb-4"></h3><p id="modal-description" class="text-gray-600"></p></div></div></div>
@@ -111,10 +157,14 @@
         <header class="py-6">
             <nav class="flex items-center justify-between gap-4">
                 <div class="flex items-center gap-2">
-                    <span class="font-semibold text-xl">Dominic Kudom</span>
+                    <div class="logo">
+                        <a href="index.html" class="text-decoration-none">
+                            <span class="first-name">Dominic</span><br>
+                            <span class="last-name">Kudom</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex-1 flex items-center justify-center gap-14">
-                    <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
                     <a href="services.html" class="text-gray-600 hover:text-custom">Projects</a> 
                 </div>
                 <button class="lg:hidden" onclick="toggleSidebar()">
@@ -137,7 +187,12 @@
                                 <div class="absolute bottom-0 right-0 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
                             </div>
                             <div class="profile-info text-center">
-                                <h1 class="mt-4 text-2xl font-bold">Dominic Kudom</h1>
+                                <div class="logo">
+                                    <a href="index.html" class="text-decoration-none">
+                                        <span class="first-name">Dominic</span>
+                                        <span class="last-name">Kudom</span>
+                                    </a>
+                                </div>
                                 <p class="text-gray-600">Software Developer</p>
                                 <p class="text-sm text-gray-500 mt-2">@plndominickudom</p>
                             </div>
@@ -214,12 +269,21 @@
                 <div class="col-span-9 main-content">
                     <div class="bg-gray-900 rounded-2xl overflow-hidden mb-12">
                         <div class="px-12 py-16">
-                            <h1 class="text-5xl font-bold text-white mb-6">I Code Therefore I am a Genius</h1>
-                            <p class="text-xl text-gray-300 mb-8"><code class="text-blue-400">&lt;code&gt;</code> I build web applications. I <code class="text-blue-400">&lt;/code&gt;</code></p>
-                            <button class="bg-custom text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition-colors">EXPLORE NOW</button>
+                            <div class="flex justify-between items-center">
+                                <div class="text-content">
+                                    <h1 class="main-heading text-3xl font-bold text-white mb-6">I Code Therefore I am a Genius</h1>
+                                    <p class="text-l text-gray-300 mb-8"><code class="text-blue-400">&lt;code&gt;</code> I build web applications. I <code class="text-blue-400">&lt;/code&gt;</code></p>
+                                    <button class="bg-custom text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition-colors">EXPLORE NOW</button>
+                                </div>
+                                <div class="profile-frame" style="margin-left: 20px;">
+                                    <div class="relative inline-block">
+                                        <div class="w-32 h-32 rounded-full bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200"></div>
+                                        <img src="Profile.jpg" alt="Profile" class="absolute inset-0 w-32 h-32 rounded-full object-cover border-4 border-white"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                     <div class="grid grid-cols-3 gap-8 mb-12">
                         <div class="bg-white rounded-lg shadow-sm p-6 text-center">
                             <h3 class="text-3xl font-bold text-custom mb-2">2+</h3>
