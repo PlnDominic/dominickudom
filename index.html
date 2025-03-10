@@ -442,13 +442,15 @@
             }
             .social-links {
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 position: fixed;
+                right: 0;
                 bottom: 0;
-                width: 100%;
-                padding: 0.5rem;
+                padding: 0.4rem;
                 z-index: 20;
-                flex-direction: row;
+            }
+            .social-links a {
+                margin: 0.2rem 0; /* Adjust spacing for vertical layout */
             }
             .link-container {
                 margin: 0 0.5rem;
