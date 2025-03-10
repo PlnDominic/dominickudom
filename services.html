@@ -9,42 +9,49 @@
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
     <style>
-        @media (max-width: 600px) {
-            body {
-                font-size: 0.7rem; /* Adjust base font size */
+        .latest-projects {
+            grid-template-columns: 1fr; /* One project per row */
+        }
+        .services-solutions {
+            grid-template-columns: repeat(2, 1fr); /* Two services per row */
+        }
+        @media (max-width: 668px) {
+            h2 {
+                font-size: 0.8rem; /* Further reduce h2 font size */
             }
-            .grid {
-                grid-template-columns: repeat(2, 1fr); /* Two items per row */
+            h3 {
+                font-size: 0.7rem; /* Further reduce h3 font size */
             }
-            .social-links {
-                flex-direction: column;
-                align-items: center;
+            p {
+                font-size: 0.65rem; /* Further reduce paragraph font size */
             }
-            .bg-gray-900 {
-                padding: 1rem;
+            .text-xl {
+                font-size: 0.8rem; /* Further reduce text-xl class font size */
+            }
+            .text-2xl {
+                font-size: 0.8rem; /* Further reduce text-2xl class font size */
             }
         }
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr); /* Two items per row */
-                gap: 4px; /* Adjust gap for better spacing */
+        @media (max-width: 668px) {
+            h1 {
+                font-size: 0.8rem; /* Reduce h1 font size in sidebar */
             }
-            .latest-projects {
-                grid-template-columns: repeat(2, 1fr); /* Two projects per row */
+            p {
+                font-size: 0.75rem; /* Reduce paragraph font size in sidebar */
+            }
+            .text-sm {
+                font-size: 0.625rem; /* Further reduce text-sm class font size */
             }
         }
-        @media (max-width: 600px) {
-            body {
-                font-size: 0.7rem; /* Adjust base font size */
+        @media (max-width: 668px) {
+            h3 {
+                font-size: 0.7rem; /* Reduce section titles font size */
             }
-            .grid {
-                grid-template-columns: 1fr; /* One item per row */
+            .font-medium {
+                font-size: 0.75rem; /* Reduce skill names font size */
             }
-            .latest-projects {
-                grid-template-columns: 1fr; /* One project per row */
-            }
-            .services-solutions {
-                grid-template-columns: 1fr; /* One service per row */
+            .text-sm {
+                font-size: 0.6rem; /* Further reduce percentage font size */
             }
         }
     </style>
@@ -54,7 +61,6 @@
         <header class="py-6">
             <nav class="flex items-center justify-between gap-4">
                 <div class="flex items-center gap-2">
-                    <img src="Profile.jpg" alt="Logo" class="h-8 w-auto"/>
                     <span class="font-semibold text-xl">Dominic Kudom</span>
                 </div>
                 <div class="flex-1 flex items-center justify-center gap-14">
@@ -159,7 +165,7 @@
 
                     <div class="bg-white rounded-lg shadow-sm p-8 mb-12 services-solutions">
                         <h2 class="text-2xl font-bold mb-6">Services &amp; Solutions</h2>
-                        <div class="grid grid-cols-4 gap-6 animate-fade-in">
+                        <div class="grid grid-cols-2 gap-6 animate-fade-in services-solutions">
                             <div class="flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg p-4 rounded-lg"><div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12"><i class="fas fa-code text-custom text-xl"></i></div><div><h3 class="font-semibold mb-2">Software Development</h3><p class="text-gray-600">Custom SaaS, API development, Web &amp; Mobile solutions using Python, React, Node.js</p></div></div><div class="flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg p-4 rounded-lg"><div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12"><i class="fas fa-globe text-custom text-xl"></i></div><div><h3 class="font-semibold mb-2">Geospatial Services</h3><p class="text-gray-600">PostGIS, OpenLayers, Leaflet implementation, Satellite Image Processing and Analysis Services</p></div></div>
                             <div class="flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg p-4 rounded-lg">
                                 <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12"><i class="fas fa-city text-custom text-xl"></i></div>
@@ -181,7 +187,7 @@
 
                     <div>
                         <h2 class="text-2xl font-bold mb-6">Latest Projects</h2>
-                        <div class="grid grid-cols-3 gap-6 latest-projects">
+                        <div class="grid grid-cols-2 gap-6 latest-projects">
                             <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-168&#39;).src, &#39;Banking Dashboard&#39;, &#39;A comprehensive banking solution with real-time analytics and financial management tools. Features include transaction monitoring, budget tracking, and investment portfolio management.&#39;)">
                                 <img src="obotan.jpg" alt="Project 1" class="w-full h-48 object-cover"/>
                                 <div class="p-6">
