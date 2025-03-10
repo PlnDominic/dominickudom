@@ -8,6 +8,31 @@
     <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/><style>.animate-fade-in { animation: fadeIn 1s ease-in-out; } @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }</style>
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-[&#39;Inter&#39;]"><script>function showProject(image, title, description) { const modal = document.getElementById('project-modal'); document.getElementById('modal-image').src = image; document.getElementById('modal-title').textContent = title; document.getElementById('modal-description').textContent = description; modal.classList.remove('hidden'); }</script><div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"><div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl max-w-4xl w-full"><div class="relative"><button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="document.getElementById(&#34;project-modal&#34;).classList.add(&#34;hidden&#34;)"><i class="fas fa-times text-xl"></i></button><div class="p-8"><img id="modal-image" src="" alt="Project Preview" class="w-full rounded-lg mb-6"/><h3 id="modal-title" class="text-2xl font-bold mb-4"></h3><p id="modal-description" class="text-gray-600"></p></div></div></div></div>
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,38 +167,38 @@
                     <div>
                         <h2 class="text-2xl font-bold mb-6">Latest Projects</h2>
                         <div class="grid grid-cols-3 gap-6">
-                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-168&#39;).src, &#39;Banking Dashboard&#39;, &#39;A comprehensive banking solution with real-time analytics and financial management tools. Features include transaction monitoring, budget tracking, and investment portfolio management.&#39;)">
+                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-168").src, "Banking Dashboard", "A comprehensive banking solution with real-time analytics and financial management tools. Features include transaction monitoring, budget tracking, and investment portfolio management.")'>
                                 <img src="obotan.jpg" alt="Project 1" class="w-full h-48 object-cover"/>
                                 <div class="p-6">
                                     <h3 class="font-semibold mb-2 group-hover:text-custom">Obotan Cooperative Banking Software</h3>
                                     <p class="text-gray-600">A comprehensive banking solution with real-time analytics</p>
                                 </div>
                             </div>
-                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-173&#39;).src, &#39;E-commerce Platform&#39;, &#39;Full-featured online shopping platform with payment integration, inventory management, and customer relationship management system.&#39;)">
+                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-173").src, "E-commerce Platform", "Full-featured online shopping platform with payment integration, inventory management, and customer relationship management system.")'>
                                 <img src="lavimac.png" alt="Project 2" class="w-full h-48 object-cover"/>
                                 <div class="p-6">
                                     <h3 class="font-semibold mb-2 group-hover:text-custom">Lavimac Royal Hotel</h3>
                                     <p class="text-gray-600">Elegant hotel website with booking system and virtual tours</p>
                                 </div>
                             </div>
-                        <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-178&#39;).src, &#39;Fitness Tracker App&#39;, &#39;Mobile application for tracking workouts and health metrics with personalized workout plans and progress tracking.&#39;)">
+                        <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-178").src, "Fitness Tracker App", "Mobile application for tracking workouts and health metrics with personalized workout plans and progress tracking.")'>
                             <img src="mikjane.png" alt="Project 3" class="w-full h-48 object-cover"/>
                             <div class="p-6">
                                 <h3 class="font-semibold mb-2 group-hover:text-custom">Mikjane Hotel Management Software</h3>
                                 <p class="text-gray-600">Hotel management system software for booking and room management</p>
                             </div>
                         </div>
-                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-183&#39;).src, &#39;Task Management System&#39;, &#39;Project management tool with Kanban boards, team collaboration features, and automated workflow management.&#39;)">
+                            <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-183").src, "Task Management System", "Project management tool with Kanban boards, team collaboration features, and automated workflow management.")'>
                                 <img src="Dominic Kudom Portfolio.png" alt="Project 4" class="w-full h-48 object-cover"/><div class="p-6">
                                     <h3 class="font-semibold mb-2 group-hover:text-custom">Dominic Kudom Portfolio</h3>
-                                    <p class="text-gray-600">Dominic Kudom Portfolio highlighting my skills and experiences</p></div></div><div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-188&#39;).src, &#39;Real Estate Platform&#39;, &#39;Property listing and management system with virtual tours, advanced search filters, and agent portal.&#39;)">
+                                    <p class="text-gray-600">Dominic Kudom Portfolio highlighting my skills and experiences</p></div></div><div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-188").src, "Real Estate Platform", "Property listing and management system with virtual tours, advanced search filters, and agent portal.")'>
                                     <img src="Pro.png" alt="Project 5" class="w-full h-48 object-cover"/>
                             <div class="p-6">
                                 <h3 class="font-semibold mb-2 group-hover:text-custom">Pro Realty Property Real Estate Platform</h3>
-                                <p class="text-gray-600">Property listing and management system with virtual tours</p>
+                                <p class="text-gray-600">Property listing and management system with virtual tours, advanced search filters, and agent portal.</p>
                             </div>
                         </div>
-                        <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick="showProject(document.getElementById(&#39;id-183&#39;).src, &#39;Task Management System&#39;, &#39;Project management tool with Kanban boards, team collaboration features, and automated workflow management.&#39;)">
+                        <div class="group bg-white rounded-lg shadow-sm overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer" onclick='showProject(document.getElementById("id-183").src, "Task Management System", "Project management tool with Kanban boards, team collaboration features, and automated workflow management.")'>
                             <img src="Bibiani.jpg" alt="Project 4" class="w-full h-48 object-cover"/><div class="p-6">
                                 <h3 class="font-semibold mb-2 group-hover:text-custom">BABMA Building Compliance Software</h3>
                                 <p class="text-gray-600">Bibiani Anhwiaso Bekwai Municipal Assembly Building Compliance Software</p>
@@ -187,7 +212,7 @@
 
         <footer class="mt-24 py-8 border-t">
             <div class="flex justify-between items-center">
-                <p class="text-gray-600">© 2025 Dominic Kudom. All rights reserved | Ecstasy Geospatial Services</p>
+                <p class="text-gray-600"> 2025 Dominic Kudom. All rights reserved | Ecstasy Geospatial Services</p>
                 <div class="flex gap-4">
                     <a href="https://github.com/PlnDominic" class="text-gray-600 hover:text-custom"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/dominic-kudom" class="text-gray-600 hover:text-custom"><i class="fab fa-linkedin"></i></a>
