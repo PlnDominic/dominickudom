@@ -64,6 +64,46 @@
                 text-align: left; /* Align text to the left for better readability */
             }
         }
+        @media (max-width: 668px) {
+            .sidebar {
+                display: none; /* Hide sidebar by default */
+                position: fixed; /* Fix position for sidebar */
+                top: 0;
+                left: 0;
+                width: 100%; /* Full width for mobile view */
+                height: 100%; /* Full height for mobile view */
+                background: white; /* Background color for sidebar */
+                z-index: 1000; /* Ensure it is above other content */
+                transition: transform 0.3s ease; /* Smooth transition */
+            }
+            .sidebar.active {
+                display: block; /* Show sidebar when active */
+                transform: translateX(0); /* Slide in effect */
+            }
+            .main-content {
+                transition: opacity 0.3s ease; /* Smooth transition for main content */
+            }
+            .main-content.hidden {
+                opacity: 0; /* Hide main content when sidebar is active */
+            }
+            .main-content {
+                width: 100vw; /* Use viewport width for full screen */
+                padding: 0; /* Remove padding for full width */
+                margin: 0; /* Remove margin for full width */
+            }
+            .sidebar {
+                display: none; /* Ensure sidebar is hidden */
+            }
+        }
+        @media (max-width: 668px) {
+            .sidebar {
+                overflow-y: auto; /* Enable vertical scrolling */
+                padding: 20px; /* Add padding for better spacing */
+            }
+            .profile-info {
+                text-align: center; /* Center align profile information */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-[&#39;Inter&#39;]"><script>function showProject(image, title, description) { const modal = document.getElementById('project-modal'); document.getElementById('modal-image').src = image; document.getElementById('modal-title').textContent = title; document.getElementById('modal-description').textContent = description; modal.classList.remove('hidden'); }</script><div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"><div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl max-w-4xl w-full"><div class="relative"><button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="document.getElementById(&#34;project-modal&#34;).classList.add(&#34;hidden&#34;)"><i class="fas fa-times text-xl"></i></button><img id="modal-image" src="" alt="Project Preview" class="w-full rounded-lg mb-6"/><h3 id="modal-title" class="text-2xl font-bold mb-4"></h3><p id="modal-description" class="text-gray-600"></p></div></div></div>
@@ -77,22 +117,44 @@
                     <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
                     <a href="services.html" class="text-gray-600 hover:text-custom">Projects</a> 
                 </div>
+                <button class="lg:hidden" onclick="toggleSidebar()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </nav>
         </header>
 
         <main class="mt-16">
             <div class="grid grid-cols-12 gap-8">
-                <div class="col-span-3 sidebar">
-                    <div class="sticky top-8">
+                <div class="col-span-3 sidebar lg:block">
+                    <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="toggleSidebar()">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                    <div class="sticky top-8 align-center">
                         <div class="text-center mb-8">
                             <div class="relative inline-block">
                                 <div class="w-32 h-32 rounded-full bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200"></div>
                                 <img src="Profile.jpg" alt="Profile" class="absolute inset-0 w-32 h-32 rounded-full object-cover border-4 border-white"/>
                                 <div class="absolute bottom-0 right-0 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
                             </div>
-                            <h1 class="mt-4 text-2xl font-bold">Dominic Kudom</h1>
-                            <p class="text-gray-600">Software Developer</p>
-                            <p class="text-sm text-gray-500 mt-2">@plndominickudom</p>
+                            <div class="profile-info text-center">
+                                <h1 class="mt-4 text-2xl font-bold">Dominic Kudom</h1>
+                                <p class="text-gray-600">Software Developer</p>
+                                <p class="text-sm text-gray-500 mt-2">@plndominickudom</p>
+                            </div>
+                            <div class="flex items-center gap-3 mt-4">
+                                <i class="fas fa-map-marker-alt text-custom"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">Location</p>
+                                    <p class="font-medium">Bibiani, Ghana</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-graduation-cap text-custom"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500 flex items-center">Education</p>
+                                    <p class="font-medium flex items-center">Graduate</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
@@ -100,8 +162,8 @@
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-map-marker-alt text-custom"></i>
                                     <div>
-                                        <p class="text-sm text-gray-500">Location</p>
-                                        <p class="font-medium">Bibiani, Ghana</p>
+                                        <p class="text-sm text-gray-500 flex items-center">Location</p>
+                                        <p class="font-medium flex items-center">Bibiani, Ghana</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3">
@@ -149,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="col-span-9">
+                <div class="col-span-9 main-content">
                     <div class="bg-gray-900 rounded-2xl overflow-hidden mb-12">
                         <div class="px-12 py-16">
                             <h1 class="text-5xl font-bold text-white mb-6">I Code Therefore I am a Genius</h1>
@@ -252,5 +314,18 @@
             </div>
         </footer>
     </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            sidebar.classList.toggle('active');
+            mainContent.classList.toggle('hidden');
+            if (sidebar.classList.contains('active')) {
+                sidebar.style.display = 'block'; // Show sidebar
+            } else {
+                sidebar.style.display = 'none'; // Hide sidebar
+            }
+        }
+    </script>
 </body>
 </html>
