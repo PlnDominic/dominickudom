@@ -184,6 +184,21 @@
             color: #4ECDC4;
         }
 
+        .link-container {
+            display: inline-block;
+            width: fit-content;
+            padding: 0.3rem;
+            margin: 0.2rem;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .link-container {
+                border: 1px solid #ccc;
+            }
+        }
+
         @media (max-width: 768px) {
             #globe-container {
                 position: fixed;
@@ -490,9 +505,9 @@
     </nav>
 
     <div class="social-links">
-        <a href="https://github.com/PlnDominic" target="_blank">Github</a>
-        <a href="https://linkedin.com/in/dominic-kudom" target="_blank">LinkedIn</a>
-        <a href="mailto:dominickudom@icloud.com">Gmail</a>
+        <div class="link-container"><a href="https://github.com/PlnDominic" target="_blank">GitHub</a></div>
+        <div class="link-container"><a href="https://linkedin.com/in/dominic-kudom" target="_blank">LinkedIn</a></div>
+        <div class="link-container"><a href="mailto:dominickudom@icloud.com">Gmail</a></div>
     </div>
 
     <div id="theme-toggle" style="position: fixed; bottom: 10px; left: 10px; font-size: 12px;">
