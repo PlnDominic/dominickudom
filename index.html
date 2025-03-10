@@ -519,6 +519,22 @@
             z-index: 20;
             padding: 0.5rem;
         }
+
+        @media (max-width: 600px) {
+            .company-name {
+                margin-top: -1rem; /* Push upwards */
+            }
+            .company-tagline {
+                margin-top: -0.5rem; /* Push upwards */
+            }
+            .bio {
+                margin-top: -0.5rem; /* Push upwards */
+            }
+            .social-links a {
+                font-size: 0.8rem; /* Reduce size of links */
+                margin: 0 0.2rem; /* Adjust margin for spacing */
+            }
+        }
     </style>
 </head>
 <body>
@@ -556,9 +572,9 @@
     </nav>
 
     <div class="social-links">
-        <div class="link-container"><a href="https://github.com/PlnDominic" target="_blank">GitHub</a></div>
-        <div class="link-container"><a href="https://linkedin.com/in/dominic-kudom" target="_blank">LinkedIn</a></div>
-        <div class="link-container"><a href="mailto:dominickudom@icloud.com">Gmail</a></div>
+        <a href="https://github.com/PlnDominic" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/dominic-kudom" target="_blank">LinkedIn</a>
+        <a href="mailto:dominickudom@icloud.com">Gmail</a>
     </div>
 
     <div class="hamburger" onclick="toggleTextStack()">&#9776;</div>
