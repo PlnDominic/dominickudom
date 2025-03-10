@@ -440,6 +440,15 @@
                 padding: 0.6rem 1.2rem;
             }
         }
+
+        .hamburger {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 30;
+        }
     </style>
 </head>
 <body>
@@ -485,6 +494,15 @@
             Day/Night Mode
         </label>
     </div>
+
+    <div class="hamburger" onclick="toggleTextStack()">&#9776;</div>
+
+    <script>
+        function toggleTextStack() {
+            const techStack = document.querySelector('.tech-stack');
+            techStack.style.display = techStack.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 
     <script type="importmap">
     {
