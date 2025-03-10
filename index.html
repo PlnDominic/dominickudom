@@ -184,6 +184,25 @@
             color: #4ECDC4;
         }
 
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+            .menu.active {
+                display: block;
+            }
+        }
+
         @media (max-width: 768px) {
             #globe-container {
                 position: fixed;
@@ -464,13 +483,18 @@
         <span style="color: orange;">OpenLayers</span>, <span style="color: blue;">Leaflet</span>
     </div>
 
-    <div class="bio">
-        <h1 style="font-size: smaller;">ECSTASY GEOSPATIAL SERVICES</h1>
-        <p style="font-size: smaller;">Transforming spatial data into actionable insights</p>
+    <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- Hamburger icon -->
     </div>
 
-    <div class="bio">
-        <p style="font-size: normal;">I am Dominic Kudom, a creative geospatial web developer and designer specializing in leveraging technology to bring spatial data to life. My journey began in backend development, but my passion for visualizing and creating interactive geospatial experiences led me to explore innovative 3D and web-based solutions. To channel this passion, I founded Ecstasy Geospatial Services, where I combine technical expertise and creativity to solve spatial challenges and deliver impactful digital solutions.</p>
+    <div class="menu">
+        <div class="bio">
+            <h1 style="font-size: smaller;">ECSTASY GEOSPATIAL SERVICES</h1>
+            <p style="font-size: smaller;">Transforming spatial data into actionable insights</p>
+        </div>
+        <div class="bio">
+            <p style="font-size: normal;">I am Dominic Kudom, a creative geospatial web developer and designer specializing in leveraging technology to bring spatial data to life. My journey began in backend development, but my passion for visualizing and creating interactive geospatial experiences led me to explore innovative 3D and web-based solutions. To channel this passion, I founded Ecstasy Geospatial Services, where I combine technical expertise and creativity to solve spatial challenges and deliver impactful digital solutions.</p>
+        </div>
     </div>
 
     <nav class="nav-links">
@@ -500,5 +524,11 @@
     </script>
     <script type="module" src="js/globe.js"></script>
     <script src="js/script.js"></script>
+    <script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+    }
+    </script>
 </body>
 </html>
